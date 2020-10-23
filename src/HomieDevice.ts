@@ -97,7 +97,7 @@ export default class HomieDevice extends HomieTopologyRoot {
       this._onMessage(topic, !!payload ? payload.toString() : null);
     })
 
-    this.subscribe(`${this.name}/#`);
+    this._mqttClient.subscribe(`${this.config.mqtt.base_topic}/${this.name}/#`);
     this._mqttClient.subscribe(`${this.config.mqtt.base_topic}$broadcast/#`);
 
     console.log(`Homie device ${this.config.friendlyName} (${this.config.name}) connected`);
