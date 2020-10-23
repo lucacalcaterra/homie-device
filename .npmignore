@@ -7,6 +7,5 @@ node_modules
 *.md
 .git*
 tsconfig.*
-src
 bin
 test
