@@ -6,6 +6,5 @@ node_modules
 .travis.yml
 *.md
 .git*
-tsconfig.*
 bin
 test
